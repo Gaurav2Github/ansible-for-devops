@@ -1,0 +1,18 @@
+---
+- name: Install Apache 2.2.x, PHP 5.4.x, MySQL 5.5.x, Drush 7.x, Drupal 6.x, 7.x, or 8.0.x
+  hosts: drupal-server
+  # remote_user: root
+  remote_user: ubuntu
+  sudo: yes
+
+  pre_tasks:
+    - name: Update apt cache if needed.
+      apt: update_cache=yes cache_valid_time=3600
+
+
+  roles:
+    - common
+    - apache
+    - php
+    - mysql
+    - drush

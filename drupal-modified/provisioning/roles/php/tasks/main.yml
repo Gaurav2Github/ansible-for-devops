@@ -1,0 +1,17 @@
+---
+- name: Add ondrej repository for later versions of PHP.
+  apt_repository: repo='ppa:ondrej/php5' update_cache=yes
+
+- name: "Install common dependencies."
+  apt: "name={{ item }} state=present"
+  with_items:
+    - php5
+    - php5-common
+    - php5-mysql
+    - php5-cli
+    - php5-curl
+    - php5-gd
+    - php5-dev
+    - php5-mcrypt
+    - php-apc
+    - php-pear 
