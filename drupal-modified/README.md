@@ -1,5 +1,11 @@
 # Simple Drupal Development VM
 
+##Ansible deployment scripts.
+
+Dev environment on a virtual machine `ansible-playbook -i dev.inventory/ site.yml`
+Staging environment on a virtual machine `ansible-playbook -i staging.inventory/ site.yml`
+production environment on a virtual machine `ansible-playbook -i production.inventory/ site.yml`
+
 **For a fully-featured VM environment for Drupal, please check out [Drupal VM](http://www.drupalvm.com/).**
 
 This project makes local Drupal test/development environment management quick and easy. It installs the following on an Ubuntu 12.04 linux VM:
